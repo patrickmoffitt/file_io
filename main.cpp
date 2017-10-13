@@ -8,11 +8,12 @@ int main() {
 
     File_io fio;
 
-    fio.get_filename()
+    fio.set_locale()
+            .get_filename()
             .get_temps()
             .save()
             .restore()
             .print();
-    
+
     return 0;
 }
