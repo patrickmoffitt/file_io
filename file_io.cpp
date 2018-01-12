@@ -109,7 +109,7 @@ File_io File_io::print() {
     cout.imbue(std::locale(posix_lang));
     const char *localtime_format = ("%a %b %d, %Y " + time_format  + " %Z").c_str();
     if (data.empty()) {
-        cerr << FILE_IO_NO_DATA_ERROR << endl;
+        cerr << FILE_IO_NO_DATA_ERROR << filename << endl;
     } else {
         for (auto item : data) {
             cout << std::put_time(std::localtime(&item.time), localtime_format)
@@ -146,7 +146,7 @@ File_io File_io::set_locale() {
         FILE_IO_OPEN_ERROR          = "Erreur: impossible d'ouvrir ";
         FILE_IO_FILE_MODE_WRITING   = " pour l'écriture.";
         FILE_IO_FILE_MODE_READING   = " pour la lecture.";
-        FILE_IO_NO_DATA_ERROR       = "Erreur: aucune donnée trouvée.";
+        FILE_IO_NO_DATA_ERROR       = "Erreur: aucune donnée trouvée dans ";
         FILE_IO_YES_CHAR            = "o";
         FILE_IO_NO_CHAR             = "n";
     } else {
@@ -163,7 +163,7 @@ File_io File_io::set_locale() {
         FILE_IO_OPEN_ERROR          = "Error: can't open ";
         FILE_IO_FILE_MODE_WRITING   = " for writing.";
         FILE_IO_FILE_MODE_READING   = " for reading.";
-        FILE_IO_NO_DATA_ERROR       = "Error: no data found.";
+        FILE_IO_NO_DATA_ERROR       = "Error: no data found in ";
         FILE_IO_YES_CHAR            = "y";
         FILE_IO_NO_CHAR             = "n";
     }

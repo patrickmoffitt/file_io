@@ -24,25 +24,16 @@ class File_io {
     string posix_lang{"en_US.UTF-8"};
     string time_format{"%T"};
     void reset_cin();
-
-
     void filename_prompt();
 
 public:
     File_io() = default;
-
     std::string filename{};
-
     File_io get_filename();
-
     File_io get_temps();
-
     File_io save();
-
     File_io restore();
-
     File_io print();
-
     File_io set_locale();
 
     const char *FILE_IO_ASK_FILENAME_PROMPT;
