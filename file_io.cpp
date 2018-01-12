@@ -22,7 +22,6 @@ using std::cerr;
 using std::cin;
 using std::endl;
 using std::string;
-using std::strcat;
 
 
 void File_io::reset_cin() {
@@ -31,7 +30,7 @@ void File_io::reset_cin() {
 };
 
 void File_io::filename_prompt() {
-    std::cout << endl << FILE_IO_ASK_FILENAME_PROMPT << std::endl;
+    cout << endl << FILE_IO_ASK_FILENAME_PROMPT << std::endl;
 };
 
 File_io File_io::get_filename() {
